@@ -1,0 +1,32 @@
+.main-buttons ul {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+}
+.main-buttons li::before {
+    position: absolute;
+    content: "•";
+    font-size: 10px;
+    left: 1rem;
+}
+
+.main-buttons button {
+    text-align: left;
+    color: rgb(var(--darker-gray));
+    background-color: rgb(var(--bs-light-rgb));
+    border: none;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.1);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 100%;
+    gap: 0.5rem;
+    border-radius: var(--bs-border-radius);
+    display: inline-flex;
+    align-items: center;
+}
+.main-buttons button:hover,
+.main-buttons button:active {
+    background-color: rgb(var(--light-gray));
+}

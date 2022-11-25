@@ -1,0 +1,57 @@
+.sidebar {
+    width: var(--sidebar-width);
+    background-color: rgb(var(--dark-blue));
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    padding: 20px;
+    font-size: 1rem;
+    line-height: 1.5rem;
+}
+
+.sidebar .logo {
+    padding-bottom: 2rem;
+}
+
+.sidebar .nav-link.home {
+    background-color: rgba(var(--light-blue), 0.25);
+    color: white;
+    border-top-right-radius: 0.5rem;
+    border-bottom-right-radius: 0.5rem;
+    margin-bottom: 1rem;
+    margin-left: -1.25rem;
+    padding-left: 1.25rem;
+}
+.sidebar .nav-title {
+    color: rgb(var(--light-blue));
+    opacity: 0.7;
+    font-weight: bold;
+    margin-top: 0.75rem;
+}
+
+.sidebar .nav-link {
+    color: rgb(var(--light-blue));
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+}
+.sidebar .nav-link:hover {
+    color: white;
+}
+
+.sidebar hr {
+    color: rgb(var(--light-blue));
+}
+
+.sidebar .close-btn {
+    position: absolute;
+    bottom: 0.75rem;
+    color: rgb(var(--light-blue));
+    background: none;
+    border: none;
+    padding: 0;
+}
+.sidebar .close-btn:hover {
+    color: white;
+}

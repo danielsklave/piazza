@@ -1,38 +1,77 @@
-.App {
-  text-align: center;
+:root {
+  --light-gray: 243, 243, 243;
+  --gray: 153, 153, 153;
+  --dark-gray: 102, 102, 102;
+  --darker-gray: 77, 77, 77;
+  --green: 57, 181, 74;
+  --dark-blue: 35, 57, 93;
+  --light-blue: 156, 166, 181;
+  --sidebar-width: 220px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+html {
+  background-color: rgb(var(--bs-light-rgb));
+}
+html body {
+  background-color: unset;
+  font-size: 0.9rem;
+  line-height: 1rem;
+}
+ul {
+  margin: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+/* Override bootstrap colors */
+.text-secondary {
+  color: rgb(var(--gray)) !important;
+}
+.text-dark {
+  color: rgb(var(--darker-gray)) !important;
+}
+.border-secondary {
+  border-color: rgb(var(--light-gray)) !important;
+}
+
+@media (min-width: 1680px){
+  .container{
+      max-width: 1600px;
   }
 }
+.page-content-wrapper {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .page-content-wrapper {
+    margin-left: var(--sidebar-width);
+  }
+}
+.page-content {
+  margin-top: 36px;
+}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card {
+  border-color: rgb(var(--light-gray));
+  border-width: 2px;
+  border-radius: 1rem;
+}
+.card-title {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 0.5rem;
+}
+.page-content .card-title {
+  color: rgb(var(--dark-gray));
+}
+.card-body {
+  padding: 1.25rem;
 }
 
-.App-link {
-  color: #61dafb;
+.badge.rounded-pill {
+  padding: 3.5px 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.section-title {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: rgb(var(--gray));
 }
