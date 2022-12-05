@@ -1,0 +1,18 @@
+$light-gray: rgb(243, 243, 243);
+$gray: rgb(153, 153, 153);
+$dark-gray: rgb(102, 102, 102);
+$darker-gray: rgb(77, 77, 77);
+$green: rgb(57, 181, 74);
+$dark-blue: rgb(35, 57, 93);
+$light-blue: rgb(156, 166, 181);
+$lighter-blue: rgb(238, 245, 252);
+
+$sidebar-width: 220px;
+
+$card-border-color: $light-gray;
+
+
+:export {
+  green: $green;
+  darkBlue: $dark-blue;
+}

@@ -1,5 +1,4 @@
 import { Image, Row, Col } from "react-bootstrap"
-import "./PerformanceStat.css";
 
 const PerformanceStat = ({ title, value, graphNr }) => <>
     <Row className="bg-light g-1 rounded py-2 px-2 align-items-center preformance-stat">

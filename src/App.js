@@ -1,7 +1,6 @@
 import { Container, Row, Col } from "react-bootstrap";
-import "bootstrap/dist/css/bootstrap.min.css";
-import "./App.css";
-import Sidebar from "./components/Sidebar.js";
+import "./App.scss";
+import Sidebar from "./components/Sidebar";
 import InfoBar from "./components/InfoBar";
 import PageContent from "./components/PageContent";
 

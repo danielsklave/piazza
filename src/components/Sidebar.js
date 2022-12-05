@@ -1,7 +1,6 @@
 import { Nav, Badge, Image } from "react-bootstrap";
 import { FontAwesomeIcon as I } from "@fortawesome/react-fontawesome"
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"
-import "./Sidebar.css";
 
 const Sidebar = props => <>
     <div className="sidebar d-none d-lg-block">

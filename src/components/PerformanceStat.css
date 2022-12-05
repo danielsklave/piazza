@@ -1,9 +1,0 @@
-.preformance-stat h1 {
-    font-size: min(2vw, 42px);
-    margin: 0;
-    font-weight: bold;
-}
-.preformance-stat .performance-name {
-    line-height: clamp(12px, 0.7vw, 14px);
-    font-size: clamp(12px, 0.7vw, 14px);
-}

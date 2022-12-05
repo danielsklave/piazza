@@ -15,13 +15,11 @@ const InfoBar = props => <>
             <Card.Title className="text-secondary mb-4">
                 WELCOME
             </Card.Title>
-            <Card.Text as="div" className="text-dark">
-                <Image className="border rounded border-secondary" fluid src="/welcome.png"/>
-                <p className="pt-2">
-                    We'll show you tips here for how you can sit
-                    back and let Piazza Talent work for you.
-                </p>
-            </Card.Text>
+            <Image className="border rounded border-secondary" fluid src="/welcome.png"/>
+            <p className="pt-2 text-dark">
+                We'll show you tips here for how you can sit
+                back and let Piazza Talent work for you.
+            </p>
             <Card.Link href="#">
                 Start here
             </Card.Link>
@@ -30,23 +28,21 @@ const InfoBar = props => <>
         <Card body>
             <Card.Title className="text-secondary mb-4 justify-content-between">
                 PERFORMANCE
-                <select className="text-secondary border-0 form-select-sm">
-                    <option value="12" selected>12mo</option>
+                <select defaultValue="12" className="text-secondary border-0 form-select-sm">
+                    <option value="12">12mo</option>
                     <option value="6">6mo</option>
                     <option value="3">3mo</option>
                     <option value="1">1mo</option>
                 </select>
                 
             </Card.Title>
-            <Card.Text as="div" className="text-dark">
-                <Stack gap={3}>
-                    <PerformanceStat graphNr={1} value="45" title="Events scheduled" />
-                    <PerformanceStat graphNr={2} value="13" title="Jobs Posted" />
-                    <PerformanceStat graphNr={3} value="315" title="Interviews Scheduled" />
-                    <PerformanceStat graphNr={3} value="1,788" title="Messages sent" />
-                </Stack>
-            </Card.Text>
+            <Stack gap={3} className="text-dark">
+                <PerformanceStat graphNr={1} value="45" title="Events scheduled" />
+                <PerformanceStat graphNr={2} value="13" title="Jobs Posted" />
+                <PerformanceStat graphNr={3} value="315" title="Interviews Scheduled" />
+                <PerformanceStat graphNr={3} value="1,788" title="Messages sent" />
+            </Stack>
         </Card>
-    </Stack>   
+    </Stack>
 </>
 export default InfoBar;

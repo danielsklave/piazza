@@ -2,7 +2,6 @@ import { Card, Nav, Stack } from "react-bootstrap";
 import InitiativeTable from "./InitiativeTable.js";
 import { FontAwesomeIcon as I } from "@fortawesome/react-fontawesome"
 import { solid } from "@fortawesome/fontawesome-svg-core/import.macro"
-import "./InitiativeTableCards.css";
 import { tableData1, tableData2 } from "../data.js";
 
 const InitiativeTableCards = props => <div className="initiatives">
@@ -28,9 +27,7 @@ const InitiativeTableCards = props => <div className="initiatives">
                 </div>
                 EVENTS
             </Card.Title>
-            <Card.Text as="div">
-                <InitiativeTable data={tableData1} />
-            </Card.Text>
+            <InitiativeTable data={tableData1} />
             <Card.Link href="#" className="text-secondary">
                 See all
                 <I icon={solid("chevron-right")} size="xs" className="ms-1" />
@@ -44,9 +41,7 @@ const InitiativeTableCards = props => <div className="initiatives">
                 </div>
                 FILL OPEN ROLES
             </Card.Title>
-            <Card.Text as="div">
-                <InitiativeTable data={tableData2} />
-            </Card.Text>
+            <InitiativeTable data={tableData2} />
             <Card.Link href="#" className="text-secondary">
                 See all
                 <I icon={solid("chevron-right")} size="xs" className="ms-1" />

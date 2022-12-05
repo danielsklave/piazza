@@ -1,0 +1,266 @@
+@import "variables.module";
+@import "node_modules/bootstrap/scss/bootstrap";
+
+html {
+  background-color: $light;
+
+  body {
+    background-color: unset;
+    font-size: 0.9rem;
+    line-height: 1rem;
+  }
+}
+ul {
+  margin: 0;
+}
+
+/* Override bootstrap classes */
+
+.text-secondary {
+  color: $gray !important;
+}
+.text-dark {
+  color: $darker-gray !important;
+}
+.border-secondary {
+  border-color: $light-gray !important;
+}
+
+@media (min-width: 1680px){
+  .container{
+      max-width: 1600px;
+  }
+}
+.page-content-wrapper {
+  margin-left: 0;
+}
+@media (min-width: 992px) {
+  .page-content-wrapper {
+    margin-left: $sidebar-width;
+  }
+}
+.page-content {
+  margin-top: 36px;
+}
+
+.card {
+  border-width: 2px;
+  border-radius: 1rem;
+}
+.card-title {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+.page-content .card-title {
+  color: $dark-gray;
+}
+.card-body {
+  padding: 1.25rem;
+}
+
+.badge.rounded-pill {
+  padding: 3.5px 6px;
+}
+
+/* Section titles */
+
+.section-title {
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+  color: $gray;
+}
+
+/* Sidebar */
+
+.sidebar {
+  width: $sidebar-width;
+  background-color: $dark-blue;
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  padding: 20px;
+  font-size: 1rem;
+  line-height: 1.5rem;
+
+  .logo {
+    padding-bottom: 2rem;
+  }
+  
+  .nav-title {
+    color: $light-blue;
+    opacity: 0.7;
+    font-weight: bold;
+    margin-top: 0.75rem;
+  }
+
+  .nav-link {
+    color: $light-blue;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.75rem 0;
+    
+    &.home {
+      background-color: rgba($light-blue, 0.25);
+      color: white;
+      border-top-right-radius: 0.5rem;
+      border-bottom-right-radius: 0.5rem;
+      margin-bottom: 1rem;
+      margin-left: -1.25rem;
+      padding-left: 1.25rem;
+    }
+    &:hover {
+      color: white;
+    }
+  }
+  hr {
+    color: $light-blue;
+  }
+
+  .close-btn {
+    position: absolute;
+    bottom: 0.75rem;
+    color: $light-blue;
+    background: none;
+    border: none;
+    padding: 0;
+
+    &:hover {
+      color: white;
+    }
+  }
+}
+
+/* Launch new initiative card */
+
+.main-buttons {
+  ul {
+    list-style-type: none;
+    position: relative;
+    padding-left: 1.5rem;
+
+    li::before {
+      position: absolute;
+      content: "•";
+      font-size: 10px;
+      left: 1rem;
+    }
+  }
+  
+  button {
+    text-align: left;
+    color: $darker-gray;
+    background-color: $light;
+    border: none;
+    padding: 0.5rem 0.75rem;
+    box-shadow: 0px 5px 0px 0px rgba(0,0,0,0.1);
+    font-weight: bolder;
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+    width: 100%;
+    gap: 0.5rem;
+    border-radius: $border-radius;
+    display: inline-flex;
+    align-items: center;
+
+    &:hover, &:active {
+      background-color: $light-gray;
+    }
+  }
+}
+
+/* Todo card */
+
+.todo {
+  background-color: $lighter-blue;
+  border: none;
+
+  ul {
+    list-style-type: none;
+    padding-left: 1.5rem;
+
+    li {
+      margin-bottom: 0.75rem;
+  
+      &::before {
+        position: absolute;
+        content: "•";
+        font-size: 42px;
+        line-height: 15px;
+        color: $danger;
+        left: 1.5rem;
+      }
+    }
+  }
+}
+
+/* My initiatives section */
+
+.initiatives {
+  .nav-link {
+    color: $gray;
+
+    &.active {
+      text-decoration: underline;
+      text-decoration-thickness: 0.25rem;
+      text-underline-position: under;
+      text-decoration-color: $secondary;
+    }
+  }
+
+  .table-responsive {
+    margin: 0 -1.25rem 0.5rem;
+  }
+
+  .table {
+    border-color: $light-gray;
+    margin: 0;
+
+    tr:last-child td {
+      border-bottom: none;
+    }
+
+    td, th {
+      vertical-align: middle;
+      padding: 0.75rem;
+
+      &:first-child {
+        padding-left: 1.5rem;
+      }
+
+      &:last-child {
+        padding-right: 1.5rem;
+      }
+    }
+
+    .badge.bg-secondary {
+      font-weight: normal;
+      padding: 2px 5px;
+      border-radius: 3px;
+    }
+
+    .progress-bar {
+      background-color: $green;
+      padding: 3px;
+      border-radius: 50%;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+  }
+}
+
+/* Performance statistic */
+
+.preformance-stat {
+  h1 {
+    font-size: min(2vw, 42px);
+    margin: 0;
+    font-weight: bold;
+  }
+
+  .performance-name {
+    line-height: clamp(12px, 0.7vw, 14px);
+    font-size: clamp(12px, 0.7vw, 14px);
+  }
+}
